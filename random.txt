@@ -1,2 +1,1 @@
-//use fs function to call a function in the application
 * spotify-this-song,"I Want it That Way"
