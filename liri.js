@@ -60,7 +60,7 @@ spotify.search({ type: 'track', query: song }, function(err, data) {
     console.log('--Date:', date.toDateString());
   });
   
-} else {
+} else if (process.argv[2] === "do-what-it-says") {
   function search() {
     fs.readFile('random.txt', "utf8", function(err, data){
     splitText = data.split(',');
