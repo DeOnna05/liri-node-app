@@ -61,10 +61,20 @@ spotify.search({ type: 'track', query: song }, function(err, data) {
   });
   
 } else {
-  fs.readFile('random.txt', "utf8", function(err, data){
-    input = data.split(',');
-    console.log(input);
-  });
+  function search() {
+    fs.readFile('random.txt', "utf8", function(err, data){
+    splitText = data.split(',');
+    command = splitText[0];
+    song = splitText[1];
+    
+    console.log(`node liri.js ${command} ${song}`);
+  
+});
 }
+
+search();
+
+}
+
 
 
